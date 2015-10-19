@@ -1,0 +1,201 @@
+ES6:
+  ☐ ES6 Overview in 350 Bullet Points
+    ☐ https://ponyfoo.com/articles/es6
+  ☐ Authoring JavaScript modules with ES6
+    ☐ http://javascriptplayground.com/blog/2015/10/authoring-modules-in-es6/
+  ☐ Lazy, composable, and modular JavaScript
+    ☐ https://codewords.recurse.com/issues/four/lazy-composable-and-modular-javascript
+Day 3:
+  ☐ 9:00 Keynote
+    ☐
+  ☐ 10:00
+  ☐ 11:00
+  ☐ 13:00
+  ☐ 14:00
+  ☐ 15:30
+  ☐ 16:30
+    ☐ Javascript Software Craftsmanship
+    ☐ Stephen M. Carlson
+    ☐ Notes
+      ☐ Scope/Schedule/Resources = quality AKA The Iron Triangle
+Day 2:
+  ☐ 9:00 Keynote
+    ☐ Everything I Needed to Know, I Learned in Rabbinical School
+    ☐ Yitzchock Willroth
+    ☐ Excellent
+    ☐ Notes
+      ☐ need to find the video of this one
+      ☐ https://coderabbi.github.io/about/
+  ☐ 10:00
+    ☐ Introduction to ReactJS
+    ☐ Taggart Bowen-Gadd
+    ☐ Good
+    ☐ Notes
+      ☐ http://slides.com/taggartbg/intro-to-react#/
+      ☐ more than the V in MVC
+      ☐ DOM agnostic
+      ☐ ES6/ES5/ES? via Babel transpiler
+        ☐ What is the browser support of the various ES versions?
+        ☐ classes, fat arrow
+      ☐ Can use ReactUI with other MVC frameworks
+      ☐ JSX is a DSL instead of markup
+        ☐ Browser support of React?
+  ☐ 11:00
+    ☐ Let's Talk about Flux
+    ☐ Andrew Smith - Version One
+    ☐ Meh - not a great presenter
+    ☐ Notes
+      ☐ Link/slides will be on ReatAtl website?
+        ☐ where?
+        ☐ here? http://www.meetup.com/React-ATL/files/
+      ☐ Problems? with MVC
+        ☐ Scaling?
+      ☐ Using React as the V in MVC
+      ☐ Flux is architecture for building client side applications
+        ☐ it is not a framework
+        ☐ it is not MVC
+        ☐ Components
+          ☐ View, can trigger
+          ☐ Action Creator, multiple actions routed to
+          ☐ Dispatcher, sequences actions to update the
+          ☐ Store, identifies changes to the
+          ☐ View
+  ☐ 13:00
+    ☐ Dataflow through React
+    ☐ Clint Ayres
+    ☐ meh - ok
+    ☐ Notes
+      ☐ https://jurassix.gitbooks.io/dataflow-through-react/content/
+      ☐ http://github.com/jurassix/dataflow-through-react
+      ☐ feel turned off to React based on mixing of js/html/css
+  ☐ 14:00
+    ☐ Saving Time with JavaScript Apps as Build Artifacts
+    ☐ Clay Smith
+    ☐ Ok presenter but learned nothing
+    ☐ Notes
+  ☐ 15:30
+    ☐ Lessons Learned with TypeScript and ES2015
+    ☐ Dylan Schiemann
+    ☐ Good presenter - VERY fast paced
+    ☐ Notes
+      ☐ http://bit.ly/connect-ts
+      ☐ https://gist.github.com/dylans/83e5ed4d2094f3c58343
+      ☐ remap-istanbul - A tool for remapping Istanbul coverage via Source Maps
+        ☐ https://github.com/SitePen/remap-istanbul
+      ☐ TypeScript is a superset of JS
+      ☐ plus ES6
+      ☐ RESEARCH: ES6 and DOJO
+      ☐ Use Babel to transpile
+      ☐ Babel does not support everything
+        ☐ proxies
+        ☐ decorators - ES7 feature
+          ☐ modify a class at design time by returning or modifying ...
+        ☐ streams - promises that can resolve multiple times
+      ☐ `npm install typescript`
+        ☐ `tsc` ...
+  ☐ 16:30
+    ☐ Functional Programming Basics in ES6
+    ☐ Jeremy Fairbank
+    ☐ Good presenter
+    ☐ Notes
+      ☐ well formatted/styled slides; a little too mathematics focused; interesting paradigms
+Class:
+  ☐ setup issues
+    ✔ No wifi @done(2015-10-15 09:49) @project(Class)
+    ✔ Limited power outlets @done(2015-10-15 09:10) @project(Class)
+  ✔ started - finally @done(2015-10-15 09:38) @project(Class)
+  ☐ leiningen not needed until this afternoon - ~3:30p
+  ☐ 11:30a lunch
+  ☐ Raju Gandhi - Loosely Typed
+  ☐ https://docs.angularjs.org/api - AngularJS API Docs
+    ☐ written with Angular - SPA
+  ☐ What is a SPA
+    ☐ chatty but smaller payloads
+    ☐ demo using Angular Docs
+      ☐ change header/footer and click link - no changes to header/footer
+  ☐ folder structure
+    ☐ JAVA like
+      ☐ src
+        ☐ backend - not needed for class
+        ☐ provided so this can be a standalone project
+      ☐ resources - frontend
+  ☐ directives
+    ☐ html5 attribute triggers angular - ng-app
+      ☐ directive is something that teaches browser new tricks
+      ☐ can be on any dom element
+      ☐ cannot be on two dom elements for 98% of use cases
+    ☐ evaluation directive - {{ }}
+      ☐ evaluated IN THE CURRENT CONTEXT
+      ☐ this is not eval
+      ☐ {{ 2+3 }}
+      ☐ {{ 'jason'.toUpperCase() }}
+      ☐ add an if
+      ☐ var x = 10 - errors
+      ☐ x=10 - evals to 10
+      ☐ move evaluation outside of ng-app
+    ☐ angular model - ng-model
+      ☐ automatic two way binding
+      ☐         <h3>{{ firstName }}</h3>
+        ☐ var $rootScope = {}; $rootScope.firstName = ''; //because input type = text
+      ☐         <h3>{{ user.firstName }}</h3>
+        ☐ var $rootScope = {}; $rootScope.user = {}; $rootScope.user.firstName = ''; //because input type = text
+      ☐ property is not created until someone interacts with the text box
+    ☐ ~1.3.5 changed from MVC to MVVM
+      ☐ no biz logic in controller
+      ☐ view is decorative
+      ☐ controller is interpretive
+    ☐ Angular styleguild - https://github.com/johnpapa/angular-styleguide
+    ☐ https://docs.angularjs.org/api/ng/type/form.FormController - handy!
+  ☐ Factory vs Service
+    ☐ factories and services in Angular are singletons
+  ☐ Post Angular 1.4, you must use promises instead of callbacks
+  ☐ Promises
+    ☐ var promise = $http.get("/todos", function(resp) {return resp.data;}, function(err) {});
+    ☐ promise.then(function(success) {}, function(error) {})
+    ☐ promise.then(function(success) {}, function(error) {})
+    ☐ kriskowal/q on github - "definitive promises"
+JS Function:
+  ☐ four ways to invoke a function
+    ☐ function - something()
+    ☐ method - obj = { bar: something }; ob.bar();
+    ☐ constructor - new something()
+    ☐ invoked on - other.apply(something)
+    function foo() {
+      this.name;
+      this.bla;
+      // do some work
+    }
+
+    function bar() {
+      var obj = {};
+      obj.name;
+      obj.bla;
+      //do some work
+      return obj;
+    }
+
+    // These are the same...
+    // var x = new bla();
+    var x = something();
+Research:
+  ☐ what are .clj files? clojure? What is clojure?
+Installation:
+  ✔ homebrew @done(2015-10-14 21:11) @project(Installation)
+    ✔ Remove homebrew @done(2015-10-14 21:11)
+      ✔ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall)" @done(2015-10-14 21:11)
+    ✔ install homebrew @done(2015-10-14 21:10)
+      ✔ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" @done(2015-10-14 21:10)
+  ✔ leiningen @done(2015-10-14 21:12) @project(Installation)
+    ✔ brew install leiningen @done(2015-10-14 21:10)
+      ✔ confirmed with `lein --version` @done(2015-10-14 21:10)
+  ✔ git @done(2015-10-14 21:12) @project(Installation)
+    ✔ brew install git @done(2015-10-14 21:11) @project(Installation)
+      ✔ update .bashrc to set path for git @done(2015-10-14 21:11) @project(Installation)
+      ✔ confirmed with `git --version` @done(2015-10-14 21:12) @project(Installation)
+  ✔ clone repo @done(2015-10-14 21:28) @project(Installation)
+    ✔ git clone https://github.com/jasonhwest/angudone-workshop.git @done(2015-10-14 21:21) @project(Installation)
+  ✔ test @done(2015-10-14 21:28) @project(Installation)
+    ✔ git checkout master-1.4 @done(2015-10-14 21:23) @project(Installation)
+    ✔ lein ring server @done(2015-10-14 21:27) @project(Installation)
+    ✔ in chrome console @done(2015-10-14 21:28) @project(Installation)
+      ✔ http.get("todos").success(function(data, status, headers, config) { console.log("There are " + data.length + " todos"); }).error(function(data, status, headers, config) { console.error("Oh Noes! Something went wrong" + data); }); @done(2015-10-14 21:29) @project(Installation)

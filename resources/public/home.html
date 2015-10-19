@@ -11,13 +11,8 @@
   <script src="js/jquery.js"></script>
   <script src="js/bootstrap.js"></script>
   <script src="js/main.js"></script>
-  <script>
-   angular.module("myApp", []).run(function($http){
-     window.http = $http;
-   });
-  </script>
 </head>
-<body ng-app="myApp">
+<body ng-app="TodosApp">
   <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container">
       <div class="navbar-header">
@@ -39,8 +34,46 @@
   <div class="container">
     <div class="starter-template">
       <h1>Angudone</h1>
-      <div class="lead">
-        This is where we can play!
+      <!-- <div ng-controller="CounterCtrl as ctr">{{ ctr.todos.length || "0" }} total todos</div> -->
+      <div class="lead" ng-controller="MainCtrl as main">
+        <form name="todoForm" novalidate>
+          <div>
+            <input name="newTodoText" type="text" ng-model="main.newTodo.text" required>&nbsp;<button ng-disabled="todoForm.newTodoText.$invalid" ng-click="main.addTodo(main.newTodo)">Add</button>
+          </div>
+
+          <div ng-if="main.todos.length===0">Nothing to do?</div>
+
+          <div ng-repeat="t in main.todos">
+            <label>
+              <input type="checkbox" ng-checked="t.done" ng-click="main.finishTodo(t)"> {{ t.text }}
+            </label>
+            <!-- <a>
+              <span class="small glyphicon glyphicon-edit"></span>
+            </a> -->
+            <a ng-click="main.deleteTodo(t)">
+              <span class="small glyphicon glyphicon-trash"></span>
+            </a>
+          </div>
+
+        </form>
+
+        <hr>
+        <div class="text-info bg-info container">
+          <h3>todoForm:</h3>
+          {{ todoForm }}
+        </div>
+
+        <hr>
+        <div class="text-info bg-info container">
+          <h3>todoForm.newTodoText:</h3>
+          {{ todoForm.newTodoText }}
+        </div>
+
+        <hr>
+        <div class="text-info bg-info container">
+          <h3>main.todos:</h3>
+          {{ main.todos }}
+        </div>
       </div>
     </div>
   </div>
